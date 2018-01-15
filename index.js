@@ -64,7 +64,7 @@ function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
 // })
 
 function deleteFromObjectByKey(object, key) {
-  return Object.assign({}, object, { delete [key]: value });
+  return Object.assign({}, object, { [key]: value });
 }
 
 // describe('destructivelyDeleteFromObjectByKey(object, key)', function() {
@@ -85,5 +85,5 @@ function deleteFromObjectByKey(object, key) {
 // })
 
 function destructivelyDeleteFromObjectByKey(object, key) {
-  return destructivelyUpdateObjectWithKeyAndValue = Object.assign(object, { delete [key]: value });
+  return destructivelyUpdateObjectWithKeyAndValue = Object.assign(object, { [key]: value });
 }
