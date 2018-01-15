@@ -44,9 +44,15 @@ function updateObjectWithKeyAndValue(object, key, value) {
 // })
 
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  return destructivelyUpdateObjectWithKeyAndValue = Object.assign(object, { [key]: value });
+  object[key] = value
+
+  return object
 }
 
+// function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
+//   return destructivelyUpdateObjectWithKeyAndValue = Object.assign(object, { [key]: value });
+// }
+// 
 // describe('deleteFromObjectByKey(object, key)', function() {
 //   it('deletes `key` from a clone of object and returns the new object (it is non-destructive)', function() {
 //     var obj = { prop: 1 }
